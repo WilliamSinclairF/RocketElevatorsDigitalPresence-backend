@@ -1,0 +1,15 @@
+{
+  "name": "rocketserver",
+  "version": "0.1.0",
+  "private": false,
+  "dependencies": {
+    "express": "^4.17.1",
+    "joi": "^17.2.1",
+    "path": "^0.12.7",
+    "uniqid": "^5.2.0"
+  },
+  "scripts": {},
+  "eslintConfig": {
+    "extends": "rocketserver"
+  }
+}
