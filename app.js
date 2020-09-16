@@ -2,6 +2,7 @@ const Joi = require('joi');
 const express = require('express');
 const path = require('path');
 const uniqid = require('uniqid');
+const cors = require('cors');
 
 const calcRes = require('./modules/residential/calc-res');
 const calcCom = require('./modules/commercial/calc-com');
@@ -10,6 +11,7 @@ const calcCorp = require('./modules/corporate-hybrid/calc-corp');
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 //residential
 
