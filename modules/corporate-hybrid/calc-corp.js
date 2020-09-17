@@ -33,7 +33,11 @@ function calcCorp(quoteValues) {
     total: total,
   };
 
-  return result;
+  if (total === 0) {
+    return;
+  } else {
+    return result;
+  }
 }
 
 module.exports = calcCorp;
