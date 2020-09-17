@@ -18,32 +18,24 @@ function calcRes(quoteValues) {
     numApartments
   );
 
-  if (numBasements > numFloors) {
-    return;
-  } else if (numFloors <= 0) {
-    return;
-  } else if (numApartments <= 0) {
-    return;
-  } else {
-    const subTotal = calcSubTotal(shaftDollarCostToMultiply, totalShafts);
-    const installFee = calcInstallFee(subTotal, percentValue);
-    const total = calcTotal(subTotal, installFee);
+  const subTotal = calcSubTotal(shaftDollarCostToMultiply, totalShafts);
+  const installFee = calcInstallFee(subTotal, percentValue);
+  const total = calcTotal(subTotal, installFee);
 
-    console.log('total shafts:', totalShafts, 'total columns:', numColumns);
-    console.log('subtotal:', subTotal);
-    console.log('install fee:', installFee);
-    console.log('total:', total);
+  console.log('total shafts:', totalShafts, 'total columns:', numColumns);
+  console.log('subtotal:', subTotal);
+  console.log('install fee:', installFee);
+  console.log('total:', total);
 
-    const result = {
-      totalShafts: totalShafts,
-      totalColumns: numColumns,
-      installFee: installFee,
-      subTotal: subTotal,
-      total: total,
-    };
+  const result = {
+    totalShafts: totalShafts,
+    totalColumns: numColumns,
+    installFee: installFee,
+    subTotal: subTotal,
+    total: total,
+  };
 
-    return result;
-  }
+  return result;
 }
 
 module.exports = calcRes;
