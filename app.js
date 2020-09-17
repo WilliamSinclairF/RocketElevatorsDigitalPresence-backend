@@ -31,7 +31,7 @@ app.get(
     };
 
     const result = calcRes(quoteValues);
-    const id = uniqid.time('REQ-');
+    const id = uniqid.time('QUOTE-');
 
     res.send({ ...result, id });
   }
@@ -55,7 +55,7 @@ app.get(
     };
 
     const result = calcCom(quoteValues);
-    const id = uniqid.time('REQ-');
+    const id = uniqid.time('QUOTE-');
 
     res.send({ ...result, id });
   }
@@ -80,7 +80,7 @@ app.get(
     };
 
     const result = calcCorp(quoteValues);
-    const id = uniqid.time('REQ-');
+    const id = uniqid.time('QUOTE-');
 
     res.send({ ...result, id });
   }
